@@ -14,8 +14,9 @@ cargo build --release
 cargo test
 ```
 
-Linux needs `libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libopus-dev libasound2-dev
-pkg-config` and a C++ compiler. The ignored tests start the built program, draw windows or reach
+On Debian or Ubuntu, Linux needs a C++ compiler and `pkg-config cmake nasm libgstreamer1.0-dev
+libgstreamer-plugins-base1.0-dev libopus-dev libasound2-dev libxkbcommon-dev libwayland-dev` (the
+app's CI workflow lists the same). The ignored tests start the built program, draw windows or reach
 other computers; the README of each repository says how to run them. A change to a platform's
 code (Windows, macOS, a Linux desktop) should be tried on that platform.
 
