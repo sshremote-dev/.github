@@ -37,6 +37,22 @@ One change per commit, its message a single sentence that starts with one of `fe
 Match the style around you. Comments are short and say why, not what. New dependencies need a good
 reason; most of what the program needs is already in its tree.
 
+## Translations
+
+SSH Remote speaks 53 languages. The English text is in the code; each other language is
+`assets/lang/<code>.json` in the sshremote repository, a table from the English text to the
+language's own. The tables were translated by machine and reviewed twice, but not yet by people who
+speak each language, so corrections from them are especially welcome:
+
+- a wrong word or sentence: open a **Translation** issue (the app links to it from Settings >
+  Appearance > Language), or change the table and send a pull request;
+- keep every `{}` (or `{0}`, `{1}` to put values in another order), `<b>`/`<a>` tags, leading and
+  trailing spaces, key names (Ctrl, Alt, Shift) and product names as they are;
+- `python3 scripts/lang.py check` must say 0 missing and 0 slots wrong for the language;
+  `scripts/lang.py todo CODE` and `scripts/lang.py pairs CODE` list what to translate or review.
+
+A new language is a new table with the same keys, and a line in the list in `src/lang/mod.rs`.
+
 ## License
 
 By contributing you agree that your contribution is licensed under the MIT license of the

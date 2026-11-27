@@ -1,0 +1,38 @@
+name: Translation
+description: A word or sentence of SSH Remote that reads wrong in your language
+title: "[Translation] "
+labels: [translation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reading SSH Remote in your language. Its texts were translated by machine and checked twice, but not yet by people who speak each language: what you send makes it right for everyone. You can also change `assets/lang/<code>.json` in the sshremote repository yourself and send a pull request.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Its name or code, e.g. Deutsch or de
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where it shows
+      description: The window, menu or message, e.g. Settings > Appearance
+  - type: textarea
+    id: now
+    attributes:
+      label: What it says now
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why (optional)
+      description: A wrong meaning, a term your system says otherwise, grammar, a word left in English
